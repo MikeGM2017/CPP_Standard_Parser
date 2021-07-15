@@ -22,7 +22,7 @@
 
 using namespace std;
 
-const string Version = "0.13";
+const string Version = "0.14";
 
 enum CT {
     CT_NO,
@@ -952,6 +952,7 @@ void Help_Print() {
     cout << "-t - print tokens;" << endl;
     cout << "-e - print ebnf objects;" << endl;
     cout << "-g - print graph;" << endl;
+    cout << "-gen - generate graph (dot format);" << endl;
     cout << "-verbose - verbose output;" << endl;
 }
 
