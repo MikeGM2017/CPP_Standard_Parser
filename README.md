@@ -16,3 +16,7 @@ Tests:
 99_all_to_one_gen.sh -> 99_all_to_one_run.sh + 99_all_to_one.txt -> 99_all_to_one_run.log - test definitions "all in one"
 
 cpp_standard_parcer -f 99_all_to_one.txt -gen - generate graph (dot format)
+
+Result:
+
+cpp_std_graph.svg
