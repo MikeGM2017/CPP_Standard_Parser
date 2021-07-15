@@ -1,0 +1,23 @@
+// 5.13.5 String literals [lex.string]
+string-literal :
+	encoding-prefix opt '"' s-char-sequence opt '"'
+	encoding-prefix opt 'R' raw-string
+s-char-sequence :
+	s-char
+	s-char-sequence s-char
+s-char :
+	any_member_of_the_basic_source_character_set_except_the_double-quote_backslash_or_new-line_character
+	escape-sequence
+	universal-character-name
+raw-string :
+	'"' d-char-sequence opt '(' r-char-sequence opt ')' d-char-sequence opt '"'
+r-char-sequence :
+	r-char
+	r-char-sequence r-char
+r-char :
+	any_member_of_the_source_character_set_except_a_right_parenthesis_followed_by_the_initial_d-char-sequence_which_may_be_empty_followed_by_a_double_quote
+d-char-sequence :
+	d-char
+	d-char-sequence d-char
+d-char :
+	any_member_of_the_basic_source_character_set_except_space_the_left_parenthesis_the_right_parenthesis_the_backslash_and_the_control_characters_representing_horizontal_tab_vertical_tab_form_feed_and_newline

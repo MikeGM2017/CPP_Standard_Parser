@@ -1,0 +1,9 @@
+// 5.13.1 Kinds of literals [lex.literal.kinds]
+literal :
+	integer-literal
+	character-literal
+	floating-point-literal
+	string-literal
+	boolean-literal
+	pointer-literal
+	user-defined-literal

@@ -1,0 +1,17 @@
+// 7.6.2.7 New [expr.new]
+new-expression :
+	"::" opt new new-placement opt new-type-id new-initializer opt
+	"::" opt new new-placement opt '(' type-id ')' new-initializer opt
+new-placement :
+	'(' expression-list ')'
+new-type-id :
+	type-specifier-seq new-declarator opt
+new-declarator :
+	ptr-operator new-declarator opt
+	noptr-new-declarator
+noptr-new-declarator :
+	'[' expression opt ']' attribute-specifier-seq opt
+	noptr-new-declarator '[' constant-expression ']' attribute-specifier-seq opt
+new-initializer :
+	'(' expression-list opt ')'
+	braced-init-list

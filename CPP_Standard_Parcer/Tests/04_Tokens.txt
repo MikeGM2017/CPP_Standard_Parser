@@ -1,0 +1,6 @@
+// 5.6 Tokens [lex.token]
+token :
+	identifier
+	keyword
+	literal
+	operator-or-punctuator

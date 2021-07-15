@@ -1,0 +1,16 @@
+// 7.6.2 Unary expressions [expr.unary]
+unary-expression :
+	postfix-expression
+	unary-operator cast-expression
+	"++" cast-expression
+	"--" cast-expression
+	await-expression
+	sizeof unary-expression
+	sizeof '(' type-id ')'
+	sizeof "..." '(' identifier ')'
+	alignof '(' type-id ')'
+	noexcept-expression
+	new-expression
+	delete-expression
+unary-operator : one_of
+	'*' '&' '+' '-' '!' '~'

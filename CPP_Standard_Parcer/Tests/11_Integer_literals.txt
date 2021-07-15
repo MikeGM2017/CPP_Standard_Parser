@@ -1,0 +1,44 @@
+// 5.13.2 Integer literals [lex.icon]
+integer-literal :
+	binary-literal integer-suffix opt
+	octal-literal integer-suffix opt
+	decimal-literal integer-suffix opt
+	hexadecimal-literal integer-suffix opt
+binary-literal :
+	"0b" binary-digit
+	"0B" binary-digit
+	binary-literal '\'' opt binary-digit
+octal-literal :
+	'0'
+	octal-literal '\'' opt octal-digit
+decimal-literal :
+	nonzero-digit
+	decimal-literal '\'' opt digit
+hexadecimal-literal :
+	hexadecimal-prefix hexadecimal-digit-sequence
+binary-digit : one_of
+	'0' '1'
+octal-digit : one_of
+	'0' '1' '2' '3' '4' '5' '6' '7'
+nonzero-digit : one_of
+	'1' '2' '3' '4' '5' '6' '7' '8' '9'
+hexadecimal-prefix : one_of
+	"0x" "0X"
+hexadecimal-digit-sequence :
+	hexadecimal-digit
+	hexadecimal-digit-sequence '\'' opt hexadecimal-digit
+hexadecimal-digit : one_of
+	'0' '1' '2' '3' '4' '5' '6' '7' '8' '9'
+	'a' 'b' 'c' 'd' 'e' 'f'
+	'A' 'B' 'C' 'D' 'E' 'F'
+integer-suffix :
+	unsigned-suffix long-suffix opt
+	unsigned-suffix long-long-suffix opt
+	long-suffix unsigned-suffix opt
+	long-long-suffix unsigned-suffix opt
+unsigned-suffix : one_of
+	"u" "U"
+long-suffix : one_of
+	"l" "L"
+long-long-suffix : one_of
+	"ll" "LL"

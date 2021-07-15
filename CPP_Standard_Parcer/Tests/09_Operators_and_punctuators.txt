@@ -1,0 +1,16 @@
+// 5.12 Operators and punctuators [lex.operators]
+preprocessing-op-or-punc :
+	preprocessing-operator
+	operator-or-punctuator
+preprocessing-operator : one of
+	"#" "##" "%:" "%:%:"
+operator-or-punctuator : one of
+	"{" "}" "[" "]" "(" ")"
+	"<:" ":>" "<%" "%>" ";" ":" "..."
+	"?" "::" "." ".*" "->" "->*" "~"
+	"!" "+" "-" "*" "/" "%" "^" "&" "|"
+	"=" "+=" "-=" "*=" "/=" "%=" "^=" "&=" "|="
+	"==" "!=" "<" ">" "<=" ">=" "<=>" "&&" "||"
+	"<<" ">>" "<<=" ">>=" "++" "--" ","
+	"and" "or" "xor" "not" "bitand" "bitor" "compl"
+	"and_eq" "or_eq" "xor_eq" "not_eq"

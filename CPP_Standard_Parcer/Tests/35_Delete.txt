@@ -1,0 +1,4 @@
+// 7.6.2.8 Delete [expr.delete]
+delete-expression :
+	"::" opt delete cast-expression
+	"::" opt delete '[' ']' cast-expression

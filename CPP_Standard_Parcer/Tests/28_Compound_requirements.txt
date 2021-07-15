@@ -1,0 +1,5 @@
+// 7.5.7.3 Compound requirements [expr.prim.req.compound]
+compound-requirement :
+	'{' expression '}' noexcept opt return-type-requirement opt ';'
+return-type-requirement :
+	"->" type-constraint

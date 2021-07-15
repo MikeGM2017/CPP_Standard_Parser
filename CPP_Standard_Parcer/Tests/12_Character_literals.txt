@@ -1,0 +1,28 @@
+// 5.13.3 Character literals [lex.ccon]
+character-literal :
+	encoding-prefix opt '\'' c-char-sequence '\''
+encoding-prefix : one_of
+	"u8" "u" "U" "L"
+c-char-sequence :
+	c-char
+	c-char-sequence c-char
+c-char :
+	any_member_of_the_basic_source_character_set_except_the_single-quote_backslash_or_new-line_character
+	escape-sequence
+	universal-character-name
+
+escape-sequence :
+	simple-escape-sequence
+	octal-escape-sequence
+	hexadecimal-escape-sequence
+simple-escape-sequence : one_of
+	'\'' '\"' '\?' '\\'
+	'\a' '\b' '\f' '\n' '\r' '\t'
+	'\v'
+octal-escape-sequence :
+	'\\' octal-digit
+	'\\' octal-digit octal-digit
+	'\\' octal-digit octal-digit octal-digit
+hexadecimal-escape-sequence :
+	"\\x" hexadecimal-digit
+	hexadecimal-escape-sequence hexadecimal-digit

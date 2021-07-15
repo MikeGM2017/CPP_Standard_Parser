@@ -1,0 +1,15 @@
+// 5.10 Identifiers [lex.name]
+identifier :
+	identifier-nondigit
+	identifier identifier-nondigit
+	identifier digit
+identifier-nondigit :
+	nondigit
+	universal-character-name
+nondigit : one_of
+	'a' 'b' 'c' 'd' 'e' 'f' 'g' 'h' 'i' 'l' 'k' 'l' 'm'
+	'n' 'o' 'p' 'q' 'r' 's' 't' 'u' 'v' 'w' 'x' 'y' 'z'
+	'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H' 'I' 'J' 'K' 'L' 'M'
+	'N' 'O' 'P' 'Q' 'R' 'S' 'T' 'U' 'V' 'W' 'X' 'Y' 'Z' '_'
+digit : one_of
+	'0' '1' '2' '3' '4' '5' '6' '7' '8' '9'

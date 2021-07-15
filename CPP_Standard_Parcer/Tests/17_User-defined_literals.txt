@@ -1,0 +1,22 @@
+// 5.13.8 User-defined literals [lex.ext]
+user-defined-literal :
+	user-defined-integer-literal
+	user-defined-floating-point-literal
+	user-defined-string-literal
+	user-defined-character-literal
+user-defined-integer-literal :
+	decimal-literal ud-suffix
+	octal-literal ud-suffix
+	hexadecimal-literal ud-suffix
+	binary-literal ud-suffix
+user-defined-floating-point-literal :
+	fractional-constant exponent-part opt ud-suffix
+	digit-sequence exponent-part ud-suffix
+	hexadecimal-prefix hexadecimal-fractional-constant binary-exponent-part ud-suffix
+	hexadecimal-prefix hexadecimal-digit-sequence binary-exponent-part ud-suffix
+user-defined-string-literal :
+	string-literal ud-suffix
+user-defined-character-literal :
+	character-literal ud-suffix
+ud-suffix :
+	identifier

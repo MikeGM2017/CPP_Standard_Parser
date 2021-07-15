@@ -1,0 +1,9 @@
+// 7.5 Primary expressions [expr.prim]
+primary-expression :
+	literal
+	this
+	'(' expression ')'
+	id-expression
+	lambda-expression
+	fold-expression
+	requires-expression

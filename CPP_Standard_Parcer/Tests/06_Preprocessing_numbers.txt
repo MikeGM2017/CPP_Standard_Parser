@@ -1,0 +1,13 @@
+// 5.9 Preprocessing numbers [lex.ppnumber]
+pp-number :
+	digit
+	'.' digit
+	pp-number digit
+	pp-number identifier-nondigit
+	pp-number '\'' digit
+	pp-number '\'' nondigit
+	pp-number 'e' sign
+	pp-number 'E' sign
+	pp-number 'p' sign
+	pp-number 'P' sign
+	pp-number '.'

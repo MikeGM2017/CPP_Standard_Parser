@@ -1,0 +1,15 @@
+// 7.5.7 Requires expressions [expr.prim.req]
+requires-expression :
+	requires requirement-parameter-list opt requirement-body
+requirement-parameter-list :
+	'(' parameter-declaration-clause opt ')'
+requirement-body :
+	'{' requirement-seq '}'
+requirement-seq :
+	requirement
+	requirement-seq requirement
+requirement :
+	simple-requirement
+	type-requirement
+	compound-requirement
+	nested-requirement

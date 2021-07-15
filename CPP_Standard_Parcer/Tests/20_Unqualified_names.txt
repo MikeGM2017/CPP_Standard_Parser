@@ -1,0 +1,9 @@
+// 7.5.4.1 Unqualified names [expr.prim.id.unqual]
+unqualified-id :
+	identifier
+	operator-function-id
+	conversion-function-id
+	literal-operator-id
+	'~' type-name
+	'~' decltype-specifier
+	template-id

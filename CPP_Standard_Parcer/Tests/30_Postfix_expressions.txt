@@ -1,0 +1,21 @@
+// 7.6.1 Postfix expressions [expr.post]
+postfix-expression :
+	primary-expression
+	postfix-expression '[' expr-or-braced-init-list ']'
+	postfix-expression '(' expression-list opt ')'
+	simple-type-specifier '(' expression-list opt ')'
+	typename-specifier '(' expression-list opt ')'
+	simple-type-specifier braced-init-list
+	typename-specifier braced-init-list
+	postfix-expression '.' template opt id-expression
+	postfix-expression "->" template opt id-expression
+	postfix-expression "++"
+	postfix-expression "--"
+	dynamic_cast '<' type-id '>' '(' expression ')'
+	static_cast '<' type-id '>' '(' expression ')'
+	reinterpret_cast '<' type-id '>' '(' expression ')'
+	const_cast '<' type-id '>' '(' expression ')'
+	typeid '(' expression ')'
+	typeid '(' type-id ')'
+expression-list :
+	initializer-list

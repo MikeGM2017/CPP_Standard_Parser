@@ -1,0 +1,9 @@
+// 7.5.6 Fold expressions [expr.prim.fold]
+fold-expression :
+	'(' cast-expression fold-operator "..." ')'
+	'(' "..." fold-operator cast-expression ')'
+	'(' cast-expression fold-operator "..." fold-operator cast-expression ')'
+fold-operator : one_of
+	"+" "-" "*" "/" "%" "^" "&" "|" "<<" ">>"
+	"+=" "-=" "*=" "/=" "%=" "^=" "&=" "|=" "<<=" ">>=" "="
+	"==" "!=" "<" ">" "<=" ">=" "&&" "||" "," ".*" "->*"

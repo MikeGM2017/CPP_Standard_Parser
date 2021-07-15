@@ -1,0 +1,4 @@
+// 5.13.6 Boolean literals [lex.bool]
+boolean-literal :
+	false
+	true

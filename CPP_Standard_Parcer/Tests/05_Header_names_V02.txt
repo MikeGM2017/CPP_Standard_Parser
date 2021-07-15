@@ -1,0 +1,14 @@
+// 5.8 Header names [lex.header]
+header-name :
+	'<' h-char-sequence '>'
+	'"' q-char-sequence '"'
+h-char-sequence :
+	h-char
+	h-char-sequence h-char
+h-char :
+	any_member_of_the_source_character_set_except_new-line_and_AR
+q-char-sequence :
+	q-char
+	q-char-sequence q-char
+q-char :
+	any_member_of_the_source_character_set_except_new-line_and_COMMAS

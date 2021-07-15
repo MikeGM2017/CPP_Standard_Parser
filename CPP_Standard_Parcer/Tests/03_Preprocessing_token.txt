@@ -1,0 +1,14 @@
+// 5.4 Preprocessing tokens [lex.pptoken]
+preprocessing-token :
+	header-name
+	import-keyword
+	module-keyword
+	export-keyword
+	identifier
+	pp-number
+	character-literal
+	user-defined-character-literal
+	string-literal
+	user-defined-string-literal
+	preprocessing-op-or-punc
+	each_non-white-space_character_that_cannot_be_one_of_the_above

@@ -1,0 +1,29 @@
+// 5.13.4 Floating-point literals [lex.fcon]
+floating-point-literal :
+	decimal-floating-point-literal
+	hexadecimal-floating-point-literal
+decimal-floating-point-literal :
+	fractional-constant exponent-part opt floating-point-suffix opt
+	digit-sequence exponent-part floating-point-suffix opt
+hexadecimal-floating-point-literal :
+	hexadecimal-prefix hexadecimal-fractional-constant binary-exponent-part floating-point-suffix opt
+	hexadecimal-prefix hexadecimal-digit-sequence binary-exponent-part floating-point-suffix opt
+fractional-constant :
+	digit-sequence opt '.' digit-sequence
+	digit-sequence '.'
+hexadecimal-fractional-constant :
+	hexadecimal-digit-sequence opt '.' hexadecimal-digit-sequence
+	hexadecimal-digit-sequence '.'
+exponent-part :
+	'e' sign opt digit-sequence
+	'E' sign opt digit-sequence
+binary-exponent-part :
+	'p' sign opt digit-sequence
+	'P' sign opt digit-sequence
+sign : one of
+	'+' '-'
+digit-sequence :
+	digit
+	digit-sequence '\'' opt digit
+floating-point-suffix : one of
+	"f" "l" "F" "L"

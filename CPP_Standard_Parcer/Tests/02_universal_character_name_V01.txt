@@ -1,0 +1,7 @@
+// 5.3 Character sets [lex.charset]
+// 5.3.2
+hex-quad :
+	hexadecimal-digit hexadecimal-digit hexadecimal-digit hexadecimal-digit
+universal-character-name :
+	"\\u" hex-quad
+	"\\U" hex-quad hex-quad

@@ -1,0 +1,3 @@
+// 7.6.2.6 noexcept operator [expr.unary.noexcept]
+noexcept-expression :
+	noexcept '(' expression ')'

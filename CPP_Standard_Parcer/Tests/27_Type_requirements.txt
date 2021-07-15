@@ -1,0 +1,3 @@
+// 7.5.7.2 Type requirements [expr.prim.req.type]
+type-requirement :
+	typename nested-name-specifier opt type-name ';'

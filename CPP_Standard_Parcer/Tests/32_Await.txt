@@ -1,0 +1,3 @@
+// 7.6.2.3 Await [expr.await]
+await-expression :
+	co_await cast-expression

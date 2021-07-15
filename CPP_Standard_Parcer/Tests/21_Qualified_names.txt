@@ -1,0 +1,10 @@
+// 7.5.4.2 Qualified names [expr.prim.id.qual]
+qualified-id :
+	nested-name-specifier template opt unqualified-id
+nested-name-specifier :
+	"::"
+	type-name "::"
+	namespace-name "::"
+	decltype-specifier "::"
+	nested-name-specifier identifier "::"
+	nested-name-specifier template opt simple-template-id "::"

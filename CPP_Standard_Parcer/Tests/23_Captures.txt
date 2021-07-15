@@ -1,0 +1,22 @@
+// 7.5.5.2 Captures [expr.prim.lambda.capture]
+lambda-capture :
+	capture-default
+	capture-list
+	capture-default ',' capture-list
+capture-default :
+	'&'
+	'='
+capture-list :
+	capture
+	capture-list ',' capture
+capture :
+	simple-capture
+	init-capture
+simple-capture :
+	identifier "..." opt
+	'&' identifier "..." opt
+	this
+	'*' this
+init-capture :
+	"..." opt identifier initializer
+	'&' "..." opt identifier initializer
