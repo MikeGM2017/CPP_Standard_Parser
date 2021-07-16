@@ -1,0 +1,5 @@
+// 6.5.9 Equality operators
+equality-expression:
+	relational-expression
+	equality-expression "==" relational-expression
+	equality-expression "!=" relational-expression

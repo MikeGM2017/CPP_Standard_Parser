@@ -1,0 +1,6 @@
+// 6.9.1 Function definitions
+function-definition:
+	declaration-specifiers declarator declaration-list opt compound-statement
+declaration-list:
+	declaration
+	declaration-list declaration

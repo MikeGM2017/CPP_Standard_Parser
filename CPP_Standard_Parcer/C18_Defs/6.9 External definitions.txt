@@ -1,0 +1,7 @@
+// 6.9 External definitions
+translation-unit:
+	external-declaration
+	translation-unit external-declaration
+external-declaration:
+	function-definition
+	declaration

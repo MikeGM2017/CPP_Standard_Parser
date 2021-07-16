@@ -1,0 +1,27 @@
+// 6.4.4.4 Character constants
+character-constant:
+	'\'' c-char-sequence '\''
+	"L\'" c-char-sequence '\''
+	"u\'" c-char-sequence '\''
+	"U\'" c-char-sequence '\''
+c-char-sequence:
+	c-char
+	c-char-sequence c-char
+c-char:
+	any_member_of_the_source_character_set_except_the_single-quote_backslash_or_new-line character
+	escape-sequence
+escape-sequence:
+	simple-escape-sequence
+	octal-escape-sequence
+	hexadecimal-escape-sequence
+	universal-character-name
+simple-escape-sequence: one_of
+	'\'' '\"' '\?' '\\'
+	'\a' '\b' '\f' '\n' '\r' '\t' '\v'
+octal-escape-sequence:
+	'\\' octal-digit
+	'\\' octal-digit octal-digit
+	'\\' octal-digit octal-digit octal-digit
+hexadecimal-escape-sequence:
+	"\\x" hexadecimal-digit
+	hexadecimal-escape-sequence hexadecimal-digit

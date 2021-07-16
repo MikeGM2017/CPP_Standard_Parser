@@ -1,0 +1,35 @@
+// 6.4.4.2 Floating constants
+floating-constant:
+	decimal-floating-constant
+	hexadecimal-floating-constant
+decimal-floating-constant:
+	fractional-constant exponent-part opt floating-suffix opt
+	digit-sequence exponent-part floating-suffix opt
+hexadecimal-floating-constant:
+	hexadecimal-prefix hexadecimal-fractional-constant
+	binary-exponent-part floating-suffix opt
+	hexadecimal-prefix hexadecimal-digit-sequence
+	binary-exponent-part floating-suffix opt
+fractional-constant:
+	digit-sequence opt '.' digit-sequence
+	digit-sequence '.'
+exponent-part:
+	'e' sign opt digit-sequence
+	'E' sign opt digit-sequence
+sign: one of
+	'+' '-'
+digit-sequence:
+	digit
+	digit-sequence digit
+hexadecimal-fractional-constant:
+	hexadecimal-digit-sequence opt '.'
+	hexadecimal-digit-sequence
+	hexadecimal-digit-sequence '.'
+binary-exponent-part:
+	'p' sign opt digit-sequence
+	'P' sign opt digit-sequence
+hexadecimal-digit-sequence:
+	hexadecimal-digit
+	hexadecimal-digit-sequence hexadecimal-digit
+floating-suffix: one of
+	'f' 'l' 'F' 'L'

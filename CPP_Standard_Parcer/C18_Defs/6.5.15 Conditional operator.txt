@@ -1,0 +1,4 @@
+// 6.5.15 Conditional operator
+conditional-expression:
+	logical-OR-expression
+	logical-OR-expression '?' expression ':' conditional-expression

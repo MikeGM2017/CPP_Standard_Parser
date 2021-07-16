@@ -1,0 +1,4 @@
+// 6.5.13 Logical AND operator
+logical-AND-expression:
+	inclusive-OR-expression
+	logical-AND-expression "&&" inclusive-OR-expression

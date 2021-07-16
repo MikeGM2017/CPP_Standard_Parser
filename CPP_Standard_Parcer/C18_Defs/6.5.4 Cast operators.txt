@@ -1,0 +1,4 @@
+// 6.5.4 Cast operators
+cast-expression:
+	unary-expression
+	'(' type-name ')' cast-expression

@@ -1,0 +1,4 @@
+// 6.5.14 Logical OR operator
+logical-OR-expression:
+	logical-AND-expression
+	logical-OR-expression "||" logical-AND-expression

@@ -1,0 +1,5 @@
+// 6.8.1 Labeled statements
+labeled-statement:
+	identifier ':' statement
+	case constant-expression ':' statement
+	default ':' statement

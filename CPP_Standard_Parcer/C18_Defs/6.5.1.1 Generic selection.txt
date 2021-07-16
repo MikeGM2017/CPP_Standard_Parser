@@ -1,0 +1,9 @@
+// 6.5.1.1 Generic selection
+generic-selection:
+	_Generic '(' assignment-expression ',' generic-assoc-list ')'
+generic-assoc-list:
+	generic-association
+	generic-assoc-list ',' generic-association
+generic-association:
+	type-name ':' assignment-expression
+	default ':' assignment-expression

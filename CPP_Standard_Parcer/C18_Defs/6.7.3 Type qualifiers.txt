@@ -1,0 +1,6 @@
+// 6.7.3 Type qualifiers
+type-qualifier:
+	const
+	restrict
+	volatile
+	_Atomic

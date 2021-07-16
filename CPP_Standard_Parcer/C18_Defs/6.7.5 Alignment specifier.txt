@@ -1,0 +1,4 @@
+// 6.7.5 Alignment specifier
+alignment-specifier:
+	_Alignas '(' type-name ')'
+	_Alignas '(' constant-expression ')'

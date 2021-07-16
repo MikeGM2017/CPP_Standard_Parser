@@ -1,0 +1,9 @@
+// 6.8.2 Compound statement
+compound-statement:
+	'{' block-item-list opt '}'
+block-item-list:
+	block-item
+	block-item-list block-item
+block-item:
+	declaration
+	statement

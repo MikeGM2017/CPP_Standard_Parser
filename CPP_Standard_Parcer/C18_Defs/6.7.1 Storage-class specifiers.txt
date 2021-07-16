@@ -1,0 +1,8 @@
+// 6.7.1 Storage-class specifiers
+storage-class-specifier:
+	typedef
+	extern
+	static
+	_Thread_local
+	auto
+	register

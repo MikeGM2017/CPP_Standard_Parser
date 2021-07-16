@@ -1,0 +1,6 @@
+// 6.5.5 Multiplicative operators
+multiplicative-expression:
+	cast-expression
+	multiplicative-expression '*' cast-expression
+	multiplicative-expression '/' cast-expression
+	multiplicative-expression '%' cast-expression

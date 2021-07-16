@@ -1,0 +1,4 @@
+// 6.5.11 Bitwise exclusive OR operator
+exclusive-OR-expression:
+	AND-expression
+	exclusive-OR-expression '^' AND-expression

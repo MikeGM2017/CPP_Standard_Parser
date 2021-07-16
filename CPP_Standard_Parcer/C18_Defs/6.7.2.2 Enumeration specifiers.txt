@@ -1,0 +1,11 @@
+// 6.7.2.2 Enumeration specifiers
+enum-specifier:
+	enum identifier opt '{' enumerator-list '}'
+	enum identifier opt '{' enumerator-list ',' '}'
+	enum identifier
+enumerator-list:
+	enumerator
+	enumerator-list ',' enumerator
+enumerator:
+	enumeration-constant
+	enumeration-constant '=' constant-expression

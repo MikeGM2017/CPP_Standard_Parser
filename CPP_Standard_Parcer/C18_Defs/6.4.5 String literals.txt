@@ -1,0 +1,14 @@
+// 6.4.5 String literals
+string-literal:
+	encoding-prefix opt '\"' s-char-sequence opt '\"'
+encoding-prefix:
+	"u8"
+	"u"
+	"U"
+	"L"
+s-char-sequence:
+	s-char
+	s-char-sequence s-char
+s-char:
+	any_member_of_the_source_character_set_except_the_double-quote_backslash_or_new-line_character
+	escape-sequence

@@ -1,0 +1,6 @@
+// 6.8.6 Jump statements
+jump-statement:
+	goto identifier ';'
+	continue ';'
+	break ';'
+	return expression opt ';'

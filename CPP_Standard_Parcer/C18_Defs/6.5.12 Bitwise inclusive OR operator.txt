@@ -1,0 +1,4 @@
+// 6.5.12 Bitwise inclusive OR operator
+inclusive-OR-expression:
+	exclusive-OR-expression
+	inclusive-OR-expression '|' exclusive-OR-expression

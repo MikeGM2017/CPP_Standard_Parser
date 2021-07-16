@@ -1,0 +1,7 @@
+// 6.5.1 Primary expressions
+primary-expression:
+	identifier
+	constant
+	string-literal
+	'(' expression ')'
+	generic-selection

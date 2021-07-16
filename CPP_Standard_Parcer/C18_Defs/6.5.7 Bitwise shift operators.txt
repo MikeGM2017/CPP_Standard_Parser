@@ -1,0 +1,5 @@
+// 6.5.7 Bitwise shift operators
+shift-expression:
+	additive-expression
+	shift-expression "<<" additive-expression
+	shift-expression ">>" additive-expression

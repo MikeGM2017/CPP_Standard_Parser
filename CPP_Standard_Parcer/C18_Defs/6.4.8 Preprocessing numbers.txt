@@ -1,0 +1,10 @@
+// 6.4.8 Preprocessing numbers
+pp-number:
+	'.' digit
+	pp-number digit
+	pp-number identifier-nondigit
+	pp-number 'e' sign
+	pp-number 'E' sign
+	pp-number 'p' sign
+	pp-number 'P' sign
+	pp-number '.'
