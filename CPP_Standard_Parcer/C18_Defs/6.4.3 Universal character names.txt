@@ -1,0 +1,6 @@
+// 6.4.3 Universal character names
+universal-character-name:
+	'\\u' hex-quad
+	'\\U' hex-quad hex-quad
+hex-quad:
+	hexadecimal-digit hexadecimal-digit hexadecimal-digit hexadecimal-digit

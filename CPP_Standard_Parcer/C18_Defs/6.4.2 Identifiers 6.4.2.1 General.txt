@@ -1,0 +1,16 @@
+// 6.4.2 Identifiers 6.4.2.1 General
+identifier:
+	identifier-nondigit
+	identifier identifier-nondigit
+	identifier digit
+identifier-nondigit:
+	nondigit
+	universal-character-name
+	other implementation-defined characters
+nondigit: one_of
+	'_' 'a' 'b' 'c' 'd' 'e' 'f' 'g' 'h' 'i' 'j' 'k' 'l' 'm'
+	'n' 'o' 'p' 'q' 'r' 's' 't' 'u' 'v' 'w' 'x' 'y' 'z'
+	'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H' 'I' 'J' 'K' 'L' 'M'
+	'N' 'O' 'P' 'Q' 'R' 'S' 'T' 'U' 'V' 'W' 'X' 'Y' 'Z'
+digit: one_of
+	'0' '1' '2' '3' '4' '5' '6' '7' '8' '9'

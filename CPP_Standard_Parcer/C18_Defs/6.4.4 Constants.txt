@@ -1,0 +1,6 @@
+// 6.4.4 Constants
+constant:
+	integer-constant
+	floating-constant
+	enumeration-constant
+	character-constant

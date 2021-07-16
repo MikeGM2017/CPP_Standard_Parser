@@ -1,0 +1,15 @@
+// 6.4 Lexical elements
+token:
+	keyword
+	identifier
+	constant
+	string-literal
+	punctuator
+preprocessing-token:
+	header-name
+	identifier
+	pp-number
+	character-constant
+	string-literal
+	punctuator
+	each_non-white-space_character_that_cannot_be_one_of_the_above

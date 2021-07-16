@@ -1,0 +1,35 @@
+// 6.4.4.1 Integer constants
+integer-constant:
+	decimal-constant integer-suffix opt
+	octal-constant integer-suffix opt
+	hexadecimal-constant integer-suffix opt
+decimal-constant:
+	nonzero-digit
+	decimal-constant digit
+octal-constant:
+	'0'
+	octal-constant octal-digit
+hexadecimal-constant:
+	hexadecimal-prefix hexadecimal-digit
+	hexadecimal-constant hexadecimal-digit
+hexadecimal-prefix: one of
+	"0x" "0X"
+nonzero-digit: one of
+	'1' '2' '3' '4' '5' '6' '7' '8' '9'
+octal-digit: one of
+	'0' '1' '2' '3' '4' '5' '6' '7'
+hexadecimal-digit: one of
+	'0' '1' '2' '3' '4' '5' '6' '7' '8' '9'
+	'a' 'b' 'c' 'd' 'e' 'f'
+	'A' 'B' 'C' 'D' 'E' 'F'
+integer-suffix:
+	unsigned-suffix long-suffix opt
+	unsigned-suffix long-long-suffix
+	long-suffix unsigned-suffix opt
+	long-long-suffix unsigned-suffix opt
+unsigned-suffix: one of
+	"u" "U"
+long-suffix: one of
+	"l" "L"
+long-long-suffix: one of
+	"ll" "LL"
