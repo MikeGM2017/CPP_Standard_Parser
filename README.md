@@ -20,3 +20,4 @@ cpp_standard_parcer -f 99_all_to_one.txt -gen - generate graph (dot format)
 Result:
 
 cpp_std_graph.svg
+c18_std_graph.svg
